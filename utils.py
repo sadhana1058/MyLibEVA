@@ -25,7 +25,6 @@ def denormalize(tensor, mean=[0.4914, 0.4822, 0.4465], std=[0.2023, 0.1994, 0.20
 
 def identify_incorrectly_labelled_images(net, criterion, device, testloader, n):
     model.eval()
-    # correct_images = []
     incorrect_images = []
     with torch.no_grad():
         for batch_idx, (inputs, targets) in enumerate(testloader):
@@ -43,17 +42,6 @@ def identify_incorrectly_labelled_images(net, criterion, device, testloader, n):
                   "pred": predicted[mis_ind][0].cpu().numpy(),
                   "img": inputs[mis_ind]
               })
-
-            # correct_inds = (is_correct==1).nonzero()[:,0]
-            # for ind in correct_inds:
-            #   if len(correct_images) == n:
-            #     break
-            #   correct_images.append({
-            #       "target": targets[ind].cpu().numpy(),
-            #       "pred": predicted[ind][0].cpu().numpy(),
-            #       "img": inputs[ind]
-            #   })
-    # return correct_images, incorrect_images
     return incorrect_images
   
   
