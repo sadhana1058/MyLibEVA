@@ -14,23 +14,19 @@
   * resnet.py
   * custom_resnet.py
   
-* utils folder
-  *  Files in this folder have required utility functions.
-  * utils.py
-  
-* src folder
-  * Files in this folder have required functions for calculating classwise accuracy, creatingcustom dataset classes ,performing  data augmentation ,
-    identifying misclassifed images,plotting graphs for train and test accuracy and lossses.
+* utils .py
+  *  Files has required utility functions.
+   
+* Remaining files in this repository have required functions for calculating classwise accuracy, creatingcustom dataset classes ,performing  data augmentation ,
+  identifying misclassifed images,plotting graphs for train and test accuracy and lossses.
   * accuracy.py
   * custom_dataset.Cifar10.py
-  * custom_dataset_tiny_imagenet.py
-  * data_augmentation.py
+  * dataAugmentation.py
   * misclassification.py
-  * plot_train_test_accuracy.py
-  * subset.py
+  * trainingtesting.py
   
-  * gradcam folder
-    * Files in this folder have required functions for gradcam calculation and visualization
-    * gradcam.py
-    * visualization.py
+ * gradcam folder
+  * Files in this folder have required functions for gradcam calculation and visualization
+  * gradcam.py
+  * visualization.py
 
